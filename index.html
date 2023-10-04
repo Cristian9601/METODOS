@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD de Clientes</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+</head>
+<body>
+    <h1>CRUD de Clientes</h1>
+
+    <!-- Formulario para crear un nuevo cliente -->
+    <h2>Crear Cliente</h2>
+    <form action="procesar_formulario.php" method="post">
+        <input type="hidden" name="action" value="create">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+        
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required><br><br>
+        
+        <label for="direccion">Direccion:</label>
+        <input type="text" id="direccion" name="direccion" required><br><br>
+        
+        <input type="submit" value="Crear Cliente">
+    </form>
+
+    <!-- Formulario para leer clientes -->
+    <h2>Leer Clientes</h2>
+    <a href="procesar_formulario.php?action=read">Ver Clientes</a>
+
+    <!-- Formulario para actualizar un cliente -->
+    <h2>Actualizar Cliente</h2>
+    <form action="procesar_formulario.php" method="post">
+        <input type="hidden" name="action" value="update">
+        <label for="id">ID del Cliente:</label>
+        <input type="text" id="id" name="id" required><br><br>
+        
+        <label for="nombre">Nuevo Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br><br>
+        
+        <label for="apellido">Nuevo Apellido:</label>
+        <input type="text" id="apellido" name="apellido"><br><br>
+        
+        <label for="direccion">Nueva Direccion:</label>
+        <input type="text" id="direccion" name="direccion"><br><br>
+        
+        <input type="submit" value="Actualizar Cliente">
+    </form>
+
+    <!-- Formulario para eliminar un cliente -->
+    <h2>Eliminar Cliente</h2>
+    <form action="procesar_formulario.php" method="post">
+        <input type="hidden" name="action" value="delete">
+        <label for="id">ID del Cliente a Eliminar:</label>
+        <input type="text" id="id" name="id" required><br><br>
+        
+        <input type="submit" value="Eliminar Cliente">
+    </form>
+</body>
+</html>
+
